@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Libre+Baskerville:ital,wght@1,400&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=League+Spartan:wght@400;700&family=Quicksand:wght@700&display=swap');
+
+:root {
+  --color-dark-green: #034638;
+  --color-clay-green: #acb19d;
+  --color-desert-beige: #c8b28a;
+  --color-desert-gold: #ded0a8;
+  --color-desert-gold-rgb: 222, 208, 168;
+  --color-desert-gold-alpha: rgba(222, 208, 168, 0.85);
+  --color-desert-blush: #f8eddb;
+  --color-white: #ffffff;
+  --color-black: #171717;
+  --background: var(--color-white);
+  --foreground: var(--color-dark-green);
+  --font-title: 'Playfair Display', serif;
+  --font-quote: 'Libre Baskerville', serif;
+  --font-body: 'Lato', Arial, Helvetica, sans-serif;
+  --color-neo-forest: #003E36;
+  --color-digital-pine: #5F7D6E;
+  --color-desert-frost: #AAB9A2;
+  --color-clean-white: #FFFFFF;
+  --color-tarifa-green: #568D86;
+  --color-cloud-green: #C2E8D4;
+  --color-neutral-sand: #D9D6CC;
+  --color-graphite-smoke: #2E2F2C;
+  --font-cormorant-garamond: 'Cormorant Garamond', serif;
+  --font-league-spartan: 'League Spartan', sans-serif;
+  --font-quicksand: 'Quicksand', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: var(--color-desert-blush);
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  letter-spacing: 0.22em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+blockquote, .quote {
+  font-family: var(--font-quote);
+  font-style: italic;
+  letter-spacing: 0.085em;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Custom Toastify styling for your brand */
+.brand-toast {
+  background: var(--color-neo-forest) !important;
+  color: var(--color-clean-white) !important;
+  font-family: var(--font-league-spartan), sans-serif !important;
+  border-radius: 12px !important;
+  border: 2px solid var(--color-tarifa-green) !important;
+  box-shadow: 0 4px 24px rgba(0, 62, 54, 0.18);
+}
+
+.input::placeholder {
+  color: var(--color-neo-forest);
+  opacity: 1;
+  font-family: var(--font-league-spartan), sans-serif;
+  font-weight: 700;
+}
