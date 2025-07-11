@@ -122,7 +122,7 @@ export default function HomePage() {
       }}>
         <h2 style={{fontFamily: "var(--font-cormorant-garamond)", fontSize: 32, fontWeight: 700, marginBottom: 24}}>About Imagine Saudi Arabia</h2>
         <p style={{fontFamily: "var(--font-league-spartan)", fontSize: 20, maxWidth: 700, margin: "0 auto"}}>
-          Imagine Saudi Arabia is your digital gateway to the Kingdom's vibrant culture, breathtaking landscapes, and limitless opportunities. Stay tuned as we build the future of Saudi tourism and innovation.
+          Imagine Saudi Arabia is your digital gateway to the Kingdom&apos;s vibrant culture, breathtaking landscapes, and limitless opportunities. Stay tuned as we build the future of Saudi tourism and innovation.
         </p>
       </section>
 
