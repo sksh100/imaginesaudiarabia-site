@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+
+const target = new Date("2025-08-08T12:00:00");
 
 function getTimeRemaining(targetDate: Date) {
   const total = targetDate.getTime() - new Date().getTime();
@@ -13,7 +15,6 @@ function getTimeRemaining(targetDate: Date) {
 }
 
 function CountdownCounter() {
-  const target = new Date("2025-08-08T12:00:00");
   const [time, setTime] = useState(getTimeRemaining(target));
 
   useEffect(() => {
@@ -21,7 +22,7 @@ function CountdownCounter() {
       setTime(getTimeRemaining(target));
     }, 1000);
     return () => clearInterval(interval);
-  }, [target]);
+  }, []);
 
   return (
     <div style={{
@@ -66,7 +67,7 @@ export default function ComingSoon() {
         const data = await res.json();
         setError(data.error || "Subscription failed.");
       }
-    } catch (err) {
+    } catch {
       setError("Subscription failed.");
     } finally {
       setSubmitting(false);
@@ -162,7 +163,7 @@ export default function ComingSoon() {
               letterSpacing: "0.161em",
               lineHeight: 1.5
             }}>
-              Embark on a journey where heritage fuels innovation - inviting travellers, dreamers and investors to be part of Saudi Arabia's bold new chapter.
+              Embark on a journey where heritage fuels innovation - inviting travellers, dreamers and investors to be part of Saudi Arabia&apos;s bold new chapter.
             </p>
             <form
               style={{
@@ -226,7 +227,7 @@ export default function ComingSoon() {
                color: "#fff",
                borderRadius: 8,
                padding: "10px 24px",
-               fontFamily: "Lato, sans-serif",
+               fontFamily: "Lato, 'sans-serif'",
                fontWeight: 700,
                fontSize: 16,
                letterSpacing: "0.161em",
@@ -243,7 +244,7 @@ export default function ComingSoon() {
                color: "#fff",
                borderRadius: 8,
                padding: "10px 24px",
-               fontFamily: "Lato, sans-serif",
+               fontFamily: "Lato, 'sans-serif'",
                fontWeight: 700,
                fontSize: 16,
                letterSpacing: "0.161em",
