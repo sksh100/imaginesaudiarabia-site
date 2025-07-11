@@ -71,7 +71,7 @@ export default function Home() {
             <span className={styles.headlineBottom}>Imagine&nbsp;Saudi&nbsp;Arabia</span>
           </h1>
           <p className={styles.subheadline}>
-            Embark on a journey where heritage fuels innovation—inviting travellers, dreamers, and investors to be part of Saudi Arabia's bold new chapter.
+            Embark on a journey where heritage fuels innovation—inviting travellers, dreamers, and investors to be part of Saudi Arabia&apos;s bold new chapter.
           </p>
           <form className={styles.newsletter} onSubmit={handleSubmit}>
             <input
