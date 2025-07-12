@@ -281,53 +281,26 @@
 }
 
 @media (max-width: 600px) {
+  .socials {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 8px 0 8px 0;
+    gap: 24px;
+    justify-content: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+  }
+  .socials a {
+    width: 32px;
+    height: 32px;
+  }
   .heroContent {
-    padding: 0 8px;
-  }
-  .headline {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-  }
-  .headlineTop, .headlineBottom {
-    font-size: 1.3rem;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-  .subheadline {
-    font-size: 1rem;
-    margin-bottom: 1.2rem;
-    padding: 0 2px;
-  }
-  .futuristicAboutBox {
-    max-width: 98vw;
-    padding: 24px 4px 20px 4px;
-    border-radius: 18px;
-  }
-  .about .museum-text {
-    font-size: 1.1rem;
-    line-height: 1.35;
-    font-weight: 600;
-    padding: 0 2px;
-  }
-  .heroLogoCorner {
-    top: 10px;
-    right: 10px;
-  }
-  .newsletter {
-    flex-direction: column;
-    gap: 8px;
-    align-items: stretch;
-  }
-  .input {
-    min-width: 0;
-    width: 100%;
-    font-size: 1rem;
-    padding: 10px 8px;
-  }
-  .ctaButton {
-    width: 100%;
-    font-size: 1rem;
-    padding: 10px 0;
+    padding-bottom: 64px;
   }
 }
 
