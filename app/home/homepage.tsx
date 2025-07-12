@@ -21,7 +21,7 @@ export default function Home() {
         padding: "24px 48px"
       }}>
         <div style={{display: "flex", alignItems: "center", gap: 16}}>
-          <Image src="/logo-header.png" alt="Imagine Saudi Logo" width={90} height={90} />
+          {/* Removed logo image */}
           <span style={{fontFamily: "var(--font-league-spartan)", fontWeight: 700, fontSize: 24, letterSpacing: 2}}>Imagine Saudi Arabia</span>
         </div>
         <nav style={{display: "flex", gap: 32}}>
@@ -70,7 +70,7 @@ export default function Home() {
           flexDirection: "column",
           alignItems: "center"
         }}>
-          <Image src="/logo.png" alt="Imagine Saudi Logo" width={80} height={80} style={{marginBottom: 24}} />
+          {/* Removed logo image in hero */}
           <h1 style={{
             fontFamily: "var(--font-cormorant-garamond)",
             fontSize: 32,
