@@ -1,10 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, useMemo } from "react";
-
-const target = new Date("2025-08-08T12:00:00");
-
+import React, { useState, useEffect } from "react";
 function getTimeRemaining(targetDate: Date) {
   const total = targetDate.getTime() - new Date().getTime();
   const seconds = Math.floor((total / 1000) % 60);
@@ -15,6 +12,7 @@ function getTimeRemaining(targetDate: Date) {
 }
 
 function CountdownCounter() {
+  const target = useState(() => new Date("2025-08-08T12:00:00"))[0];
   const [time, setTime] = useState(getTimeRemaining(target));
 
   useEffect(() => {
@@ -22,7 +20,7 @@ function CountdownCounter() {
       setTime(getTimeRemaining(target));
     }, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [target]);
 
   return (
     <div style={{
@@ -78,7 +76,7 @@ export default function ComingSoon() {
     <>
       {/* Video background */}
       <video
-        src="/hero-page-imagine.mp4"
+        src="/saudi-hero.mp4"
         autoPlay
         loop
         muted
@@ -286,4 +284,4 @@ export default function ComingSoon() {
       </div>
     </>
   );
-} 
+}

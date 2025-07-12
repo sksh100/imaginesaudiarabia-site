@@ -5,8 +5,8 @@ import path from 'path';
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    const email = body.email;
+    const formData = await req.formData();
+    const email = formData.get('email') as string;
 
     if (!email) {
       return NextResponse.json({ error: 'Missing email' }, { status: 400 });
