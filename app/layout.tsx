@@ -24,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
+        <link rel="icon" href="/logo-header.png" />
       </head>
       <body>
         {children}

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
+
 function getTimeRemaining(targetDate: Date) {
   const total = targetDate.getTime() - new Date().getTime();
   const seconds = Math.floor((total / 1000) % 60);
@@ -66,29 +67,38 @@ export default function ComingSoon() {
     <>
       {/* Video background */}
       <video
-        src="/saudi-hero.mp4"
+        src="/Imagine-Saudi-2.mp4"
         autoPlay
         loop
         muted
         playsInline
         className={styles.heroVideoBg}
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          zIndex: -1,
-        }}
       ></video>
-              <div className={styles.page}>
-          <div className={styles.hero}>
-            <div className={styles.heroContent}>
+      <div className={styles.page}>
+        <div className={styles.socialsVertical}>
+          <a href="https://x.com/Imaginesaudi" target="_blank" rel="noopener" aria-label="X">
+            <Image src="/social/x-desertfrost.png" alt="X" width={32} height={32} />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61577291696012" target="_blank" rel="noopener" aria-label="Facebook">
+            <Image src="/social/facebook-desertfrost.png" alt="Facebook" width={32} height={32} />
+          </a>
+          <a href="https://www.instagram.com/imagine.saudiarabia/" target="_blank" rel="noopener" aria-label="Instagram">
+            <Image src="/social/instagram-desertfrost.png" alt="Instagram" width={32} height={32} />
+          </a>
+          <a href="https://www.tiktok.com/@imagine.saudiarabia" target="_blank" rel="noopener" aria-label="TikTok">
+            <Image src="/social/tiktok-desertfrost.png" alt="TikTok" width={32} height={32} />
+          </a>
+          <a href="https://www.pinterest.com/ImagineSaudiArabia/" target="_blank" rel="noopener" aria-label="Pinterest">
+            <Image src="/social/pinterest-desertfrost.png" alt="Pinterest" width={32} height={32} />
+          </a>
+        </div>
+        <div className={styles.hero}>
+          <div className={styles.heroContentBox}>
             <h1 className={styles.headline}>
-              IMAGINE
-              <br />
-              SAUDI ARABIA
+              IMAGINE<br />SAUDI ARABIA
             </h1>
             <div className={styles.subheadline}>COMING SOON!</div>
-            <div className={styles.countdown}><CountdownCounter /></div>
+            <CountdownCounter />
             <p className={styles.description}>
               Embark on a journey where heritage fuels innovation - inviting travellers, dreamers and investors to be part of Saudi Arabia&apos;s bold new chapter.
             </p>
@@ -115,113 +125,19 @@ export default function ComingSoon() {
                 {submitting ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
-           {subscribed && (
-             <div style={{
-               marginTop: 18,
-               background: "#4cae9b",
-               color: "#fff",
-               borderRadius: 8,
-               padding: "10px 24px",
-               fontFamily: "Lato, 'sans-serif'",
-               fontWeight: 700,
-               fontSize: 16,
-               letterSpacing: "0.161em",
-               boxShadow: "0 2px 12px rgba(0, 62, 54, 0.10)",
-               textAlign: "center"
-             }}>
-               Thank you for subscribing!
-             </div>
-           )}
-           {error && (
-             <div style={{
-               marginTop: 18,
-               background: "#e57373",
-               color: "#fff",
-               borderRadius: 8,
-               padding: "10px 24px",
-               fontFamily: "Lato, 'sans-serif'",
-               fontWeight: 700,
-               fontSize: 16,
-               letterSpacing: "0.161em",
-               boxShadow: "0 2px 12px rgba(0, 62, 54, 0.10)",
-               textAlign: "center"
-             }}>
-               {error}
-             </div>
-           )}
-          </div>
-          <div className={styles.socials}>
-            <a href="https://x.com/Imaginesaudi" target="_blank" rel="noopener" aria-label="X">
-              <Image src="/social/x-desertfrost.png" alt="X" width={32} height={32} />
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61577291696012" target="_blank" rel="noopener" aria-label="Facebook">
-              <Image src="/social/facebook-desertfrost.png" alt="Facebook" width={32} height={32} />
-            </a>
-            <a href="https://www.instagram.com/imagine.saudiarabia/" target="_blank" rel="noopener" aria-label="Instagram">
-              <Image src="/social/instagram-desertfrost.png" alt="Instagram" width={32} height={32} />
-            </a>
-            <a href="https://www.tiktok.com/@imagine.saudiarabia" target="_blank" rel="noopener" aria-label="TikTok">
-              <Image src="/social/tiktok-desertfrost.png" alt="TikTok" width={32} height={32} />
-            </a>
-            <a href="https://www.pinterest.com/ImagineSaudiArabia/" target="_blank" rel="noopener" aria-label="Pinterest">
-              <Image src="/social/pinterest-desertfrost.png" alt="Pinterest" width={32} height={32} />
-            </a>
+            {subscribed && (
+              <div className={styles.successMsg}>
+                Thank you for subscribing!
+              </div>
+            )}
+            {error && (
+              <div className={styles.errorMsg}>
+                {error}
+              </div>
+            )}
           </div>
         </div>
       </div>
-      <style jsx global>{`
-        @media (max-width: 600px) {
-          h1 {
-            font-size: 28px !important;
-            letter-spacing: 0.12em !important;
-            line-height: 1.2 !important;
-            white-space: normal !important;
-          }
-          .your-video-class {
-            width: 100vw !important;
-            height: 100vh !important;
-            object-fit: cover !important;
-          }
-          div[style*="padding: 56px 64px"] {
-            padding: 24px 8px !important;
-            max-width: 98vw !important;
-          }
-          div[style*="font-size: 32px"] {
-            font-size: 20px !important;
-            margin-top: 24px !important;
-          }
-          div[style*="font-size: 22px"] {
-            font-size: 14px !important;
-            margin: 18px 0 24px 0 !important;
-            padding: 0 2px !important;
-          }
-          p[style*="font-size: 18px"] {
-            font-size: 13px !important;
-            margin-bottom: 24px !important;
-          }
-          form {
-            flex-direction: column !important;
-            gap: 8px !important;
-            max-width: 98vw !important;
-          }
-          input[type="email"] {
-            font-size: 14px !important;
-            padding: 10px 12px !important;
-          }
-          button[type="submit"] {
-            font-size: 14px !important;
-            padding: 10px 12px !important;
-          }
-          div[style*="position: fixed"][style*="right: 32px"] {
-            right: 8px !important;
-            bottom: 8px !important;
-            gap: 10px !important;
-          }
-          div[style*="border-radius: 24px"] {
-            border-radius: 12px !important;
-          }
-        }
-      `}</style>
     </>
   );
 } 
