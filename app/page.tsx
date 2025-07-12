@@ -76,7 +76,7 @@ export default function ComingSoon() {
     <>
       {/* Video background */}
       <video
-        src="/saudi-hero.mp4"
+        src="/Imagine-Saudi-2.mp4"
         autoPlay
         loop
         muted
