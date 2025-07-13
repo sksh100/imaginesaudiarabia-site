@@ -24,8 +24,12 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ success: true });
-  } catch (error: any) {
-    console.error("Subscribe error:", error);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Subscribe error:", error.message, error.stack);
+    } else {
+      console.error("Subscribe error:", error);
+    }
     return NextResponse.json({ error: "Failed to subscribe." }, { status: 500 });
   }
 }
