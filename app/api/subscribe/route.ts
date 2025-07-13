@@ -1,21 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { google } from "googleapis";
-import path from "path";
-import { promises as fs } from "fs";
-
-const SHEET_ID = "1Gouy78hNqY8oFt0CWkPnA3EO13FeXawsMc3kHIIGPMw";
-const SHEET_NAME = "Sheet1"; // Change if your sheet/tab is named differently
-
-async function getGoogleSheetsClient() {
-  const keyFile = path.join(process.cwd(), "lib/credentials/imaginesaudi-service-account.json");
-  const credentials = JSON.parse(await fs.readFile(keyFile, "utf8"));
-  const scopes = ["https://www.googleapis.com/auth/spreadsheets"]; 
-  const auth = new google.auth.GoogleAuth({
-    credentials,
-    scopes,
-  });
-  return google.sheets({ version: "v4", auth });
-}
 
 export async function POST(req: NextRequest) {
   try {
@@ -25,18 +8,23 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Email is required." }, { status: 400 });
     }
 
-    const sheets = await getGoogleSheetsClient();
-    await sheets.spreadsheets.values.append({
-      spreadsheetId: SHEET_ID,
-      range: `${SHEET_NAME}!A:A`,
-      valueInputOption: "RAW",
-      requestBody: {
-        values: [[email, new Date().toISOString()]],
+    // Call MailerLite API
+    const res = await fetch("https://api.mailerlite.com/api/v2/subscribers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-MailerLite-ApiKey": process.env.MAILERLITE_API_KEY!,
       },
+      body: JSON.stringify({ email }),
     });
 
+    if (!res.ok) {
+      const error = await res.json();
+      return NextResponse.json({ error: error.error.message || "Failed to subscribe." }, { status: 500 });
+    }
+
     return NextResponse.json({ success: true });
-  } catch (error: unknown) {
+  } catch (error: any) {
     console.error("Subscribe error:", error);
     return NextResponse.json({ error: "Failed to subscribe." }, { status: 500 });
   }

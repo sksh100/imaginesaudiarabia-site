@@ -125,6 +125,24 @@
   background: rgba(255, 255, 255, 0.15);
 }
 
+.input:disabled {
+  background: rgba(34, 51, 47, 0.3) !important;
+  color: #fff !important;
+  opacity: 0.7;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active,
+.input:-webkit-autofill:disabled {
+  -webkit-box-shadow: 0 0 0 1000px rgba(34, 51, 47, 0.3) inset !important;
+  box-shadow: 0 0 0 1000px rgba(34, 51, 47, 0.3) inset !important;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+  caret-color: #fff !important;
+  border-color: #ded0a8 !important;
+}
+
 .ctaButton {
   padding: 14px 24px;
   border-radius: 8px;

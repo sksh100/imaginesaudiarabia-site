@@ -91,13 +91,14 @@ export default function ComingSoon() {
                 onChange={e => setEmail(e.target.value)}
                 disabled={submitting}
                 className={styles.input}
+                autoComplete="email"
               />
               <button
                 type="submit"
                 disabled={submitting}
                 className={styles.ctaButton}
               >
-                <span style={{ marginRight: 6 }}>→</span>
+                <span style={{ marginRight: 6 }}>&rarr;</span>
                 {submitting ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
