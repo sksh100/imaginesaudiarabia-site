@@ -57,7 +57,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
-        <link rel="icon" href="/logo-header.png" />
+        <link rel="icon" href="/flavicons/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/flavicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/flavicons/favicon-16x16.png" />
+        <link rel="apple-touch-icon" href="/flavicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/flavicons/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/flavicons/android-chrome-512x512.png" />
       </head>
       <body>
         {children}
