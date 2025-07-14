@@ -219,7 +219,7 @@
 @media (max-width: 768px) {
   .heroContentBox {
     padding: 32px 24px;
-    margin: 16px;
+    margin: 120px 16px 16px 16px; /* Further lower the box on mobile */
     max-width: calc(100vw - 32px);
   }
   
