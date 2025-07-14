@@ -58,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
+        <meta name="yandex-verification" content="766ae0b809572fe9" />
         <link rel="icon" href="/flavicons/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/flavicons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/flavicons/favicon-16x16.png" />
