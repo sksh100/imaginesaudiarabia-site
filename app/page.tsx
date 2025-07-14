@@ -71,7 +71,7 @@ export default function ComingSoon() {
         <div className={styles.hero}>
           <div className={styles.heroContentBox}>
             <h1 className={styles.headline}>
-              IMAGINE<br />SAUDI ARABIA
+              <span className={styles.imagineWord}>IMAGINE</span><br /><span className={styles.saudiArabiaWord}>SAUDI ARABIA</span>
             </h1>
             <div className={styles.subheadline}>COMING SOON!</div>
             <CountdownCounter />
