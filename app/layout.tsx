@@ -3,13 +3,13 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Imagine Saudi Arabia — The Kingdom, Reimagined",
+  title: "Imagine Saudi Arabia — Culture, Heritage, and Vision 2030 Unveiled",
   description:
-    "A curated digital destination unveiling the stories, places, and future of Saudi Arabia. Explore culture, heritage, travel, and opportunity.",
+    "Explore the Kingdom of Saudi Arabia through immersive stories, ancient landmarks, and Vision 2030 insights. Discover culture, heritage, travel, and opportunity like never before.",
   openGraph: {
-    title: "Imagine Saudi Arabia — The Kingdom, Reimagined",
+    title: "Imagine Saudi Arabia — Culture, Heritage, and Vision 2030 Unveiled",
     description:
-      "A curated digital destination unveiling the stories, places, and future of Saudi Arabia. Explore culture, heritage, travel, and opportunity.",
+      "Explore the Kingdom of Saudi Arabia through immersive stories, ancient landmarks, and Vision 2030 insights. Discover culture, heritage, travel, and opportunity like never before.",
     url: "https://imaginesaudiarabia.com/",
     type: "website",
     images: [
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Imagine Saudi Arabia — The Kingdom, Reimagined",
+    title: "Imagine Saudi Arabia — Culture, Heritage, and Vision 2030 Unveiled",
     description:
-      "A curated digital destination unveiling the stories, places, and future of Saudi Arabia. Explore culture, heritage, travel, and opportunity.",
+      "Explore the Kingdom of Saudi Arabia through immersive stories, ancient landmarks, and Vision 2030 insights. Discover culture, heritage, travel, and opportunity like never before.",
     images: [
       "https://imaginesaudiarabia.com/imagine-saudi-preview-card.jpg"
     ],
@@ -39,8 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Open Graph Meta Tags */}
         <meta property="og:image" content="https://imaginesaudiarabia.com/imagine-saudi-preview-card.jpg" />
-        <meta property="og:title" content="Imagine Saudi Arabia — The Kingdom, Reimagined" />
-        <meta property="og:description" content="A curated digital destination unveiling the stories, places, and future of Saudi Arabia. Explore culture, heritage, travel, and opportunity." />
+        <meta property="og:title" content="Imagine Saudi Arabia — Culture, Heritage, and Vision 2030 Unveiled" />
+        <meta property="og:description" content="Explore the Kingdom of Saudi Arabia through immersive stories, ancient landmarks, and Vision 2030 insights. Discover culture, heritage, travel, and opportunity like never before." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://imaginesaudiarabia.com/" />
         {/* Twitter Card Meta Tag */}
