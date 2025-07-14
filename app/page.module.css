@@ -278,6 +278,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0;
+    margin-bottom: 4rem; /* Match .subheadline margin-bottom for spacing below ticker */
   }
   .countdownTop, .countdownBottom {
     font-size: 1.1rem;
