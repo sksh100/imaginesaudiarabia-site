@@ -285,5 +285,9 @@
     width: 100%;
     text-align: center;
     display: block;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.161em;
+    color: #4cae9b;
   }
 }
