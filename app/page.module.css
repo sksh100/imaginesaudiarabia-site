@@ -291,4 +291,7 @@
     letter-spacing: 0.161em;
     color: #4cae9b;
   }
+  .countdownBottom {
+    margin-bottom: 2.5rem;
+  }
 }
