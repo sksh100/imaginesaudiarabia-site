@@ -78,6 +78,9 @@ export default function ComingSoon() {
             <p className={styles.description}>
               Embark on a journey where heritage fuels innovation - inviting travellers, dreamers and investors to be part of Saudi Arabia&apos;s bold new chapter.
             </p>
+            <p className={styles.subscribeNow}>
+              Subscribe now to explore Saudi Arabia’s culture, hidden wonders, and Vision 2030 stories — curated for global minds with a heart for the Kingdom.
+            </p>
             <form
               className={styles.newsletter}
               onSubmit={handleSubscribe}
