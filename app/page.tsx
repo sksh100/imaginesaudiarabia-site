@@ -76,7 +76,7 @@ export default function ComingSoon() {
             <div className={styles.subheadline}>COMING SOON!</div>
             <CountdownCounter />
             <p className={styles.description}>
-              Embark on a journey where heritage fuels innovation — inviting travelers, dreamers, and explorers to discover Saudi Arabia’s hidden wonders, rich culture, and Vision 2030 stories.<br /><span className={styles.descriptionBreak}>Subscribe now and see the Kingdom like never before.</span>
+              Embark on a journey where heritage fuels innovation — inviting travelers, dreamers, and explorers to discover Saudi Arabia’s hidden wonders, rich culture, and Vision 2030 stories.<br /><span className={styles.descriptionBreak}>Subscribe now and see the Kingdom like never before!</span>
             </p>
             <form
               className={styles.newsletter}
