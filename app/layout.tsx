@@ -37,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="msvalidate.01" content="67A0AA30CB0325EF1EB7D2FE9FE19B391" />
         {/* Open Graph Meta Tags */}
         <meta property="og:image" content="https://imaginesaudiarabia.com/imagine-saudi-preview-card.jpg" />
         <meta property="og:title" content="Imagine Saudi Arabia — Culture, Heritage, and Vision 2030 Unveiled" />
