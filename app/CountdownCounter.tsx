@@ -23,8 +23,13 @@ export default function CountdownCounter() {
   }, [target]);
 
   return (
-    <div className={styles.countdown}>
-      {String(time.days).padStart(2, "0")} days / {String(time.hours).padStart(2, "0")} hours / {String(time.minutes).padStart(2, "0")} minutes / {String(time.seconds).padStart(2, "0")} seconds
+    <div className={styles.countdownTicker}>
+      <span className={styles.countdownTop}>
+        {String(time.days).padStart(2, "0")} days / {String(time.hours).padStart(2, "0")} hours
+      </span>
+      <span className={styles.countdownBottom}>
+        {String(time.minutes).padStart(2, "0")} minutes / {String(time.seconds).padStart(2, "0")} seconds
+      </span>
     </div>
   );
 } 
