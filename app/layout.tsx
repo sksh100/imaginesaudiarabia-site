@@ -3,8 +3,33 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Imagine Saudi Arabia",
-  description: "A curated digital destination revealing the heart and soul of the Kingdom of Saudi Arabia. Discover history, culture, travel, and opportunities.",
+  title: "Imagine Saudi Arabia — The Kingdom, Reimagined",
+  description:
+    "A curated digital destination unveiling the stories, places, and future of Saudi Arabia. Explore culture, heritage, travel, and opportunity.",
+  openGraph: {
+    title: "Imagine Saudi Arabia — The Kingdom, Reimagined",
+    description:
+      "A curated digital destination unveiling the stories, places, and future of Saudi Arabia. Explore culture, heritage, travel, and opportunity.",
+    url: "https://imaginesaudiarabia.com/",
+    type: "website",
+    images: [
+      {
+        url: "https://imaginesaudiarabia.com/imagine-saudi-preview-card.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Imagine Saudi Arabia Preview Card",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Imagine Saudi Arabia — The Kingdom, Reimagined",
+    description:
+      "A curated digital destination unveiling the stories, places, and future of Saudi Arabia. Explore culture, heritage, travel, and opportunity.",
+    images: [
+      "https://imaginesaudiarabia.com/imagine-saudi-preview-card.jpg"
+    ],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -12,6 +37,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Open Graph Meta Tags */}
+        <meta property="og:image" content="https://imaginesaudiarabia.com/imagine-saudi-preview-card.jpg" />
+        <meta property="og:title" content="Imagine Saudi Arabia — The Kingdom, Reimagined" />
+        <meta property="og:description" content="A curated digital destination unveiling the stories, places, and future of Saudi Arabia. Explore culture, heritage, travel, and opportunity." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://imaginesaudiarabia.com/" />
+        {/* Twitter Card Meta Tag */}
+        <meta name="twitter:card" content="summary_large_image" />
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B33G1F1Y8"></script>
         <script
