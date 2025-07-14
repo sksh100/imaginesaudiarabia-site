@@ -1,2 +1,9 @@
+# *
 User-agent: *
-Allow: / 
+Allow: /
+
+# Host
+Host: https://imaginesaudiarabia.com
+
+# Sitemaps
+Sitemap: https://imaginesaudiarabia.com/sitemap.xml
